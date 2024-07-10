@@ -3,16 +3,6 @@ App desenvolvido nas aulas de Dispositivos móveis - FATEC COTIA 4º Semestre</b
 
 Este app é um controle de gastos em que usa técnicas de finanças pessoais para ajudar o usuário a controlar suas despesas.
 
-## Data flow
-:::mermaid
-graph TD
-P("notebook<br>sale_headers_silver2gold_nb")
-T[lakehouse gold<br>SALE_LINES_GOLD]
-A[3scheckout_orderpict_lines_silver] --> |filter by inserted_tsbr >= DL_metadata_jobs.last_event_success_start_tsbr<br>Or<br>updated_tsbr >=DL_metadata_jobs.last_event_success_start_tsbr| P
-B[corporate_products_gold] -->  P
-C[corporate_stores_gold] -->  P
-P--> |replace by time range| T
-:::
 --------------------
 
 # Backend do Projeto
